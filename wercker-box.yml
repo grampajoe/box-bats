@@ -1,0 +1,16 @@
+name: bats
+version: 0.0.1
+type: main
+platform: ubuntu@12.04
+description: A basic Wercker box with Bats.
+keywords:
+  - ubuntu
+  - bats
+  - testing
+  - bash
+packages:
+  - bats
+script: |
+  sudo add-apt-repository ppa:duggan/bats --yes
+  sudo apt-get update -qq
+  sudo apt-get install -qq bats
