@@ -1,5 +1,6 @@
 name: bats
 version: 0.0.1
+inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type: main
 platform: ubuntu@12.04
 description: A basic Wercker box with Bats.
@@ -11,7 +12,6 @@ keywords:
 packages:
   - bats
 script: |
-  sudo apt-get install -qq python-software-properties
   sudo add-apt-repository ppa:duggan/bats --yes
   sudo apt-get update -qq
   sudo apt-get install -qq bats
